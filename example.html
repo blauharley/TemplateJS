@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div><h2>Objects that may come form an api</h2>
+    <b>
+	var objs = [
+		{ dim: { x: 25, y:14, z: 3}, name: 'circle'},
+		{ dim: { x: 19, y:17, z: 8}, name: 'triangle'},
+		{ dim: { x: 7, y:44, z: 12}, name: 'quad'},
+		{ dim: { x: 13, y:63, z: 67}, name: 'circle'},
+		{ dim: { x: 5, y:23, z: -2}, name: 'rectangle'}
+	];
+	</b>
+</div>
+	
+<h2>All objects inserted</h2>
+<div id="allObjs"></div>
+
+<h2>Last object inserted</h2>
+<div id="lastObj"></div>
+
+</body>
+<script src="template.js"></script>
+<script>
+
+	var objs = [
+		{ dim: { x: 25, y:14, z: 3}, name: 'circle'},
+		{ dim: { x: 19, y:17, z: 8}, name: 'triangle'},
+		{ dim: { x: 7, y:44, z: 12}, name: 'quad'},
+		{ dim: { x: 13, y:63, z: 67}, name: 'circle'},
+		{ dim: { x: 5, y:23, z: -2}, name: 'rectangle'}
+	];
+
+	var templ = new TemplateJS();
+
+	// if you have got more than one value to insert separate the values with pipes (|)
+	var str = "<p>{name}: | <b style='color:green'>{dim}{x}px</b> | <b style='color:red'>{dim}{y}px</b> | <b style='color:yellow'>{dim}{z}px</b></p>";
+	templ.insertTemplate(objs,str,'#allObjs'); // insert all objects
+	templ.insertTemplate([objs[4]],str,'#lastObj'); // insert last object
+
+</script>
+</html>
