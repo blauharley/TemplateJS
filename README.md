@@ -7,5 +7,5 @@ Examples:
 
 Assume that objects have got an KEY_NAME, the notation would be:
 
-var template = "<p>{KEY_NAME}</p>";
+var template = "&lt;p&gt;{KEY_NAME}&lt;/p&gt;";
 
