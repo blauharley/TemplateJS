@@ -12,6 +12,37 @@ var personObjs = [
 	{ name: 'Arnold Alois Schwarzenegger', address: { street: 'Linakstraße 9', city: 'Thal', country: 'Austria' } }
 ];
 
+var deepNestedObj = [];
+
+(function(){
+	
+	var letter = 'a';
+	var stopLetter = 'z';
+	var nestObj = '';
+	var valueToInsert = 'Hello World';
+	
+	var obj = {};
+
+	while(letter.charCodeAt() <= stopLetter.charCodeAt()){
+		
+		nestObj += '[\'' + letter + '\']';
+		
+		if(letter === 'z'){
+			eval(('obj' + nestObj + '=\''+valueToInsert+'\''));
+		}
+		else{
+			eval(('obj' + nestObj + '={};'));
+		}
+		
+		letter = String.fromCharCode(letter.charCodeAt() + 1);
+		
+	}
+	
+	deepNestedObj.push(obj);
+	
+})();
+
 var testObjs = [];
 testObjs.push(geometryObjs);
 testObjs.push(personObjs);
+testObjs.push(deepNestedObj);

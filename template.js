@@ -64,7 +64,7 @@ function TemplateJS(){}
 	  }
 	  return templateArray;
 	}
-	// [['1','4','7'],['2','5','8'],['3','6','9']] -> ['123', '456', '789']
+	// resorts values of arrays like: [['1','4','7'],['2','5','8'],['3','6','9']] -> ['123', '456', '789']
 	function resort2DimArray(array){
 
 	  var innerArray = array[0];
@@ -114,11 +114,11 @@ function TemplateJS(){}
     /* 
     * @param objects is an array with JSON-objects [{...},...]
     * @param template is a string with curls "<p>{key}</p>"
-    * @param tag_desc is the identifier of the tag and can be tag-name, id, class or altogether
+    * @param tagDesc is the identifier of the tag and can be tag-name, id, class or altogether
     */
-	TemplateJS.prototype.insertTemplate = function(objects, template, tag_desc){
+	TemplateJS.prototype.insertTemplate = function(objects, template, tagDesc){
 	  
-	  var tagElements = document.querySelectorAll(tag_desc);
+	  var tagElements = document.querySelectorAll(tagDesc);
 	  
 	  if(tagElements.length){
 	  
