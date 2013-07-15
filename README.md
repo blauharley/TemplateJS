@@ -9,11 +9,11 @@ TemplateJS
 
 Assume that <b>objects</b> have got an KEY_NAME, the notation would be:
 
-var template = "{KEY_NAME}";
+<b>var</b> template = "{KEY_NAME}";
 
 <p>and a HTML-notation would be:</p>
 
-var template = "&lt;p&gt;{KEY_NAME}&lt;/p&gt;";
+<b>var</b> template = "&lt;p&gt;{KEY_NAME}&lt;/p&gt;";
 
 <p>-------------------------------------------------------------------------------------</p>
 
@@ -23,7 +23,7 @@ When the objects have got nested keys like this:
 
 you can write templates in this way:
 
-var template = "{A}{B}{C}";
+<b>var</b> template = "{A}{B}{C}";
 
 <p>-------------------------------------------------------------------------------------</p>
 
@@ -33,7 +33,7 @@ Another case can be that <b>objects</b> have got more than one value to extract 
 
 In this case you can write following template:
 
-var template = "{KEY} | {KEY2}";
+<b>var</b> template = "{KEY} | {KEY2}";
 
 <h3>Methods</h3>
 
